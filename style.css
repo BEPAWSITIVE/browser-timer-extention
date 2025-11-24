@@ -1,0 +1,94 @@
+/* Floating Clock Container */
+#my-extension-clock-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 999999;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  cursor: move; /* Indicate draggable */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+/* Time Display */
+#my-extension-clock-time {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  color: #00ffff;
+}
+
+/* Controls Container */
+.my-extension-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Inputs */
+.my-extension-input-group {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+#my-extension-alarm-time {
+  background: #333;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  flex-grow: 1;
+  font-size: 0.9em;
+}
+
+/* Buttons */
+.my-extension-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.my-extension-btn:hover {
+  background-color: #0056b3;
+}
+
+#my-extension-set-alarm-btn {
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Alarm Status */
+#my-extension-alarm-status {
+  font-size: 0.8em;
+  color: #aaa;
+  text-align: center;
+  margin-top: 5px;
+  min-height: 1.2em;
+}
+
+/* Alarm Active State */
+.alarm-ringing {
+  animation: flash-red 1s infinite;
+}
+
+@keyframes flash-red {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); border-color: red; }
+  70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); border-color: red; }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); border-color: red; }
+}

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Page Clock & Alarm",
+  "version": "1.0",
+  "description": "Adds a floating clock with alarm features to web pages.",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/style.css"]
+    }
+  ]
+}
